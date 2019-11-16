@@ -4,6 +4,7 @@ import { ProductListComponent } from "./views/product-list/product-list.componen
 import { ProductDetailsComponent } from "./views/product-details/product-details.component";
 import { ProductUpdateComponent} from "./views/product-update/product-update.component";
 import { ProductDeleteComponent } from "./views/product-delete/product-delete.component";
+import { ProductCreateComponent } from "./views/product-create/product-create.component";
 import { NotFoundComponent } from './views/not-found/not-found.component';
 
 
@@ -23,6 +24,10 @@ const routes: Routes = [
   {
     path:'products/delete/:id',
     component:ProductDeleteComponent
+  },
+  {
+    path:'products/create/:product',
+    component:ProductCreateComponent
   },
   {
     path: '**',

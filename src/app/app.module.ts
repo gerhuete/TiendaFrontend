@@ -8,6 +8,7 @@ import { ProductDetailsComponent } from './views/product-details/product-details
 import { ProductUpdateComponent } from './views/product-update/product-update.component';
 import { ProductDeleteComponent } from './views/product-delete/product-delete.component';
 import { NotFoundComponent } from './views/not-found/not-found.component';
+import { ProductCreateComponent } from './views/product-create/product-create.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { NotFoundComponent } from './views/not-found/not-found.component';
     ProductDetailsComponent,
     ProductUpdateComponent,
     ProductDeleteComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    ProductCreateComponent
   ],
   imports: [
     BrowserModule,
