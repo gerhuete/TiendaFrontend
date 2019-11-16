@@ -3,10 +3,20 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ProductListComponent } from './views/product-list/product-list.component';
+import { ProductDetailsComponent } from './views/product-details/product-details.component';
+import { ProductUpdateComponent } from './views/product-update/product-update.component';
+import { ProductDeleteComponent } from './views/product-delete/product-delete.component';
+import { NotFoundComponent } from './views/not-found/not-found.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ProductListComponent,
+    ProductDetailsComponent,
+    ProductUpdateComponent,
+    ProductDeleteComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
