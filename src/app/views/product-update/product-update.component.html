@@ -1,1 +1,29 @@
-<p>product-update works!</p>
+<div class="col-md-6 product-container">
+    <h2 class="text-center">Edit Product</h2>
+    <form [formGroup]="editForm" (ngSubmit)="onSubmit()">
+      <div class="hidden">
+        <input type="text" formControlName="id" placeholder="id" name="id" class="form-control" id="id" readonly="true">
+      </div>
+      <div class="form-group">
+        <label for="nombre">Nombre:</label>
+        <input type="text" formControlName="nombre" placeholder="Nombre" name="nombre" class="form-control" id="nombre">
+      </div>
+  
+      <div class="form-group">
+        <label for="precio">Precio:</label>
+        <input type="number" formControlName="precio" placeholder="Precio" name="precio" class="form-control" id="precio">
+      </div>
+  
+      <div class="form-group">
+        <label for="imagen">Imagen:</label>
+        <input formControlName="imagen" placeholder="Imagen" name="imagen" class="form-control" id="imagen" readonly="true">
+      </div>
+  
+      <div class="form-group">
+        <label for="categorias">Categorias:</label>
+        <input formControlName="categorias" placeholder="Categoria" name="categorias" class="form-control" id="categorias">
+      </div>
+
+      <button class="btn btn-success">Update</button>
+    </form>
+  </div>

@@ -12,7 +12,7 @@ const routes: Routes = [
     component:ProductListComponent
   },
   {
-    path:'products/update/:id/:product',
+    path:'products/update/:id',
     component:ProductUpdateComponent
   },
   {
