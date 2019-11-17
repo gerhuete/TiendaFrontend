@@ -16,7 +16,7 @@ const routes: Routes = [
     component:ProductUpdateComponent
   },
   {
-    path:'products/create/:product',
+    path:'products/create',
     component:ProductCreateComponent
   },
   {

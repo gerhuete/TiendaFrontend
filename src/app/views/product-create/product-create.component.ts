@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {FormBuilder, FormGroup, Validators} from "@angular/forms";
+import {Router} from "@angular/router";
+import {ProductService} from "../../services/product.service";
 
 @Component({
   selector: 'app-product-create',
@@ -7,9 +10,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductCreateComponent implements OnInit {
 
-  constructor() { }
+  constructor(private formBuilder: FormBuilder,private router: Router, private apiService: ProductService) { }
+
+  addForm: FormGroup;
 
   ngOnInit() {
+    this.addForm = this.formBuilder.group({
+      //id: [],
+      nombre: ['', Validators.required],
+      precio: ['', Validators.required],
+      imagen: ['', Validators.required],
+      categorias: ['', Validators.required]
+    });
+
   }
+
+  onSubmit() {
+    this.apiService.createProduct(this.addForm.value)
+      .subscribe( data => {
+        this.router.navigate(['/']);
+      });
+  }
+
 
 }
