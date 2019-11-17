@@ -1,1 +1,27 @@
-<p>product-list works!</p>
+<div class="col-md-6 product-container">
+  <h2 style="margin: auto"> Product Details</h2>
+  <button class="btn btn-danger" style="width:100px" (click)="addProduct()"> Add Product</button>
+  <br>
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th class="hidden">Id</th>
+      <th>Nombre</th>
+      <th>Precio</th>
+      <th>Imagen</th>
+      <th>Categorias</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let product of products">
+      <td class="hidden">{{product.id}}</td>
+      <td>{{product.nombre}}</td>
+      <td>{{product.precio}}</td>
+      <td>{{product.imagen}}</td>
+      <td>{{product.categorias}}</td>
+      <td><button class="btn btn-success" (click)="deleteProduct(product)"> Delete</button>
+        <button class="btn btn-success" (click)="editProduct(product)" style="margin-left: 20px;"> Edit</button></td>
+    </tr>
+    </tbody>
+  </table>
+</div>

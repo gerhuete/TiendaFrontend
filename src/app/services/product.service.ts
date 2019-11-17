@@ -25,7 +25,7 @@ export class ProductService {
   }
 
   updateProduct(product: Product): Observable<ApiResponse> {
-    return this.http.put<ApiResponse>(this.baseUrl + product.Id, product);
+    return this.http.put<ApiResponse>(this.baseUrl + product.id, product);
   }
 
   deleteProduct(id: number): Observable<ApiResponse> {
