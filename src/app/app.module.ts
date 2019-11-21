@@ -11,6 +11,7 @@ import { ProductCreateComponent } from './views/product-create/product-create.co
 import {ReactiveFormsModule} from "@angular/forms";
 import {ProductService} from "./services/product.service";
 import {HttpClientModule} from "@angular/common/http";
+import { SafePipe } from './pipes/safe.pipe';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import {HttpClientModule} from "@angular/common/http";
     ProductListComponent,
     ProductUpdateComponent,
     NotFoundComponent,
-    ProductCreateComponent
+    ProductCreateComponent,
+    SafePipe
   ],
   imports: [
     BrowserModule,

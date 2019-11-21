@@ -6,7 +6,7 @@
     <tr>
       <th class="hidden">Id</th>
       <th>Nombre</th>
-      <th>Precio</th>
+      <th>Precio C$</th>
       <th>Imagen</th>
       <th>Categorias</th>
       <th></th>
@@ -17,7 +17,7 @@
       <td class="hidden">{{product.id}}</td>
       <td>{{product.nombre}}</td>
       <td>{{product.precio}}</td>
-      <td>{{product.imagen}}</td>
+      <td><img [src]="product.imagen| safe: 'url'" /></td>
       <td>{{product.categorias}}</td>
       <td><button class="btn btn-danger" (click)="deleteProduct(product)"> Delete</button>
         <button class="btn btn-success" (click)="editProduct(product)" style="margin-left: 20px;"> Edit</button></td>
